@@ -1,0 +1,8 @@
+---
+# tasks file for script_execution
+    - name: script execution
+      script: test_script.sh
+      register: script_output
+    - debug:
+        msg: script output:- {{ script_output ['stdout_lines'] }}
+
